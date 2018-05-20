@@ -4,7 +4,12 @@
 body {
     background-image: url("cloudman_compressed.jpg");
 	}
-div.quote{
+h1{
+	opacity: 1;
+	font-family: Verdana;
+	color: #1d2577;
+	}
+#quote{
 	position: fixed;
 	top: 30%;
 	width: 100%;
@@ -13,19 +18,25 @@ div.quote{
 	background-color: white;
 	opacity: 0.8;
 }
-h1{
-	opacity: 1;
-	font-family: Verdana;
-	color: #1d2577;
-	}
+#quote:hover{
+	opacity: 0.5;
+}
+
+
 </style>
 
 <body>
-<div class="quote">
-<h1>Hallo Amelie!</h1>
-<h1>Ich mag dich</h1>
+<div id="quote" onclick="changeText()">
+<h1>click me to reveal your future</h1>
+<h1></h1>
  </div>
-<img src="cloudman_compressed.jpg" alt="Simons face" width="100%" height="100%">
+<img src="cloudman_compressed.jpg" id="bg-img" alt="Simons face" width="100%" height="100%">
+
+<script>
+function changeText() {
+    document.getElementById("quote").innerHTML = "<h1>your future holds many adventures</h1>";
+}
+</script>
 
 </body>
 </html>
